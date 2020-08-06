@@ -1,0 +1,11 @@
+.mat-card-container {
+  display: flex;
+}
+
+mat-card {
+  margin:10px;
+}
+
+.car-thumbnail {
+  width:200px;
+}

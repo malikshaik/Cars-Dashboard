@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+	Quaterly Cars Releases
+</mat-toolbar>
+<div class="basic-container">
+	<mat-horizontal-stepper linear id="stepper">
+		<ng-template matStepperIcon="edit">-</ng-template>
+		<ng-template matStepperIcon="done">-</ng-template>
+
+		<mat-step label="Q1">
+      <ng-template matStepLabel>Q1 - {{carsReleased.Q1.length}} Car Released</ng-template>
+			<h3>Cars Released in quarter 1</h3>
+			<div class="mat-card-container">
+				<mat-card *ngFor="let item of carsReleased.Q1" (click)="openDetailsDialog(item)">
+					<img mat-card-image class="car-thumbnail" [src]="item.carImage">
+          <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+			</mat-card>
+
+			</div>
+		</mat-step>
+		<mat-step #step2 label="Q2">
+      <ng-template matStepLabel>Q2 - {{carsReleased.Q2.length}} Car Released</ng-template>
+			<h3>Cars Released in quarter 2</h3>
+			<div class="mat-card-container">
+				<mat-card *ngFor="let item of carsReleased.Q2" (click)="openDetailsDialog(item)">
+					<img mat-card-image class="car-thumbnail" [src]="item.carImage">
+          <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+			</mat-card>
+			</div>
+		</mat-step>
+		<mat-step #step3 label="Q3">
+      <ng-template matStepLabel>Q3 - {{carsReleased.Q3.length}} Car Released</ng-template>
+			<h3>Cars Released in quarter 3</h3>
+			<div class="mat-card-container">
+				<mat-card *ngFor="let item of carsReleased.Q3" (click)="openDetailsDialog(item)">
+					<img mat-card-image class="car-thumbnail" [src]="item.carImage">
+          <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+			</mat-card>
+			</div>
+		</mat-step>
+		<mat-step #step3 label="Q4">
+      <ng-template matStepLabel>Q4 - {{carsReleased.Q4.length}} Car Released</ng-template>
+			<h3>Cars Released in quarter 4</h3>
+			<div class="mat-card-container">
+				<mat-card *ngFor="let item of carsReleased.Q4" (click)="openDetailsDialog(item)">
+					<img mat-card-image class="car-thumbnail" [src]="item.carImage">
+          <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+			</mat-card>
+			</div>
+		</mat-step>
+	</mat-horizontal-stepper>
+</div>

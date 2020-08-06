@@ -1,0 +1,17 @@
+<mat-dialog-content class="mat-card-container">
+	<mat-card>
+		<img mat-card-image class="car-image" [src]="carDetail.carImage" alt="{{carDetail.name}}" />
+			</mat-card>
+
+		<mat-card>
+			<mat-card-content>
+        <mat-card-title>{{carDetail.name}}</mat-card-title>
+				<p>
+					{{carDetail.description}}
+				</p>
+			</mat-card-content>
+      <div mat-dialog-actions>
+      <button mat-button (click)="onClose()">Close</button>
+    </div>
+		</mat-card>
+</mat-dialog-content>
